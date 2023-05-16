@@ -1,0 +1,76 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!--https://www.w3schools.com/w3css/w3css_web_tmp_band.asp-->
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Bearded Belligerents</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .schedule-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      text-align: center;
+      color: #FFB33D;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    }
+    .schedule-overlay span {
+        margin-bottom:2px;
+    }
+
+    .schedule-item {
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+    <!-- Start Content -->
+    <div id="home" class="w3-content">
+
+        <!-- Logo -->
+        <img src="~/Assets/BB_RIP_Trans_Cropped.jpg" width="100%">
+
+        <!-- Image -->
+        <div class="image-container">
+            <img src="~/Images/FullBandBW2_Shrunk.jpg" width="100%">
+
+            <!-- Performance Schedule -->
+            <div class="schedule-overlay">
+                <div class="schedule-item">
+                    <h2>Metal Mania</h2>
+                    <span>Gusto's, America's Gin Mill</span><br />
+                    <span>28 Prospect St, Barre VT</span><br />
+                    <span>Saturday May 27 9:00PM</span>
+                </div>
+                <div class="schedule-item">
+                    <h2>To Us Below</h2>
+                    <span>Higher Ground Ballroom</span><br />
+                    <span>1214 Williston Rd, South Burlington VT</span><br />
+                    <span>Friday July 21</span>
+                </div>
+                <!-- Add more schedule items as needed -->
+            </div>
+        </div>
+
+        <!-- End Content -->
+    </div>
+</body>
+
+</html>

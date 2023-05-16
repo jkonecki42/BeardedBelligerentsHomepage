@@ -1,0 +1,73 @@
+﻿@page
+@model BeardedBelligerentsHomepage.Pages.ContactModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Information</title>
+</head>
+<body>
+    <div id="contact-container" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <h1>Contact Information</h1>
+        <p>For inquiries, bookings, or any other information, please reach out to us:</p>
+
+        <ul style="list-style-type: none; padding: 10px; font-size:60px;">
+            <li>
+                <a href="mailto:beardedbelligerentsvt@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="openInstagram()">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <script>
+                    function openInstagram() {
+                        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                        if (/android/i.test(userAgent)) {
+                            // Android devices
+                            window.location.href = 'instagram://user?username=bearded_belligerents_vt';
+                        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                            // iOS devices
+                            window.location.href = 'instagram://user?username=bearded_belligerents_vt';
+                        } else {
+                            // Open in browser fallback for other devices
+                            window.open('https://www.instagram.com/bearded_belligerents_vt', '_blank');
+                        }
+                    }
+                </script>
+
+            </li>
+            <li>
+                <a href="#" onclick="openFacebook()">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <script>
+                    function openFacebook() {
+                        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                        if (/android/i.test(userAgent)) {
+                            // Android devices
+                            window.location.href = 'fb://profile/BeardedBelligerentsVT/';
+                        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                            // iOS devices
+                            window.location.href = 'fb://profile/BeardedBelligerentsVT/';
+                        } else {
+                            // Open in browser fallback for other devices
+                            window.open('https://www.facebook.com/BeardedBelligerentsVT/', '_blank');
+                        }
+                    }
+                </script>
+
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
