@@ -19,7 +19,7 @@ namespace BeardedBelligerentsHomepage.Pages
 
         public void OnGet()
         {
-            Title = _config["ChangeMe"];
+            Title = _config.GetValue<string>("Title") ?? "MissingConfig";            
         }
     }
 }
