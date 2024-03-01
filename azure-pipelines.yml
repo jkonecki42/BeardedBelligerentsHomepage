@@ -21,6 +21,23 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: replacetokens@5
+  inputs:
+    targetFiles: '**/*.json'
+    encoding: 'auto'
+    tokenPattern: 'default'
+    writeBOM: true
+    escapeType: 'json'
+    verbosity: 'detailed'
+    actionOnMissing: 'warn'
+    keepToken: true
+    actionOnNoFiles: 'warn'
+    enableTransforms: false
+    enableRecursion: false
+    useLegacyPattern: false
+    enableTelemetry: true
+
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
