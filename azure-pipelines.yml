@@ -15,12 +15,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
 - task: replacetokens@5
   inputs:
     targetFiles: '**/*.json'
@@ -36,7 +30,11 @@ steps:
     enableRecursion: false
     useLegacyPattern: false
     enableTelemetry: true
+- task: NuGetToolInstaller@1
 
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
 
 - task: VSBuild@1
   inputs:
@@ -44,7 +42,7 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: 'any cpu'
     configuration: 'release'
-
+    
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
