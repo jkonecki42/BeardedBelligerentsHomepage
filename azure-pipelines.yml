@@ -10,7 +10,7 @@ pool:
   name: 'WorkPC'
 
 variables:
-  solution: '**/BeardedBelligerentsHomepage.csproj'
+  solution: '**/$(projectName).csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
