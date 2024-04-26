@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  TokenTest: $(TokenTest)
 
 steps:
 - task: replacetokens@5
