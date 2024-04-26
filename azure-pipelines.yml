@@ -10,7 +10,7 @@ pool:
   name: 'WorkPC'
 
 variables:
-  solution: '**/*.sln'
+  solution: '**/BeardedBelligerentsHomepage.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
