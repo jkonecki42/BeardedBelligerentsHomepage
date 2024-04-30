@@ -15,43 +15,4 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: replacetokens@5
-  inputs:
-    targetFiles: '**/*.json'
-    encoding: 'auto'
-    tokenPattern: 'default'
-    writeBOM: true
-    escapeType: 'json'
-    verbosity: 'detailed'
-    actionOnMissing: 'warn'
-    keepToken: true
-    actionOnNoFiles: 'warn'
-    enableTransforms: false
-    enableRecursion: false
-    useLegacyPattern: false
-    enableTelemetry: true
-  env: 
-    TokenTest: $(TokenTest)
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: 'any cpu'
-    configuration: 'release'
-    
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    artifact: 'BBWebsite'
-    publishLocation: 'pipeline'
+- template: ../Common/ci-template.yml
