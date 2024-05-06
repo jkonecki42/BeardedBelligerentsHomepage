@@ -1,0 +1,155 @@
+﻿@page
+@model BeardedBelligerentsHomepage.Pages.SetlistModel
+@{
+    ViewData["Title"] = "Setlist";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Setlist</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h3, h3 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .band-name {
+            font-weight: bold;
+            color: #FFB33D;
+        }
+
+        .song-title {
+            color: orange;
+        }
+
+        /* new style for metal container */
+        .metal-container {
+            background-color: black;
+            padding: 20px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="metal-container">
+            @* Group bands with a common names using a header *@
+            <h3>Arch Enemy</h3>
+            <ul>
+                <li><span class="song-title">Enemy Within</span></li>
+            </ul>
+
+            <h3>Avenged Sevenfold</h3>
+            <ul>
+                <li><span class="song-title">Unholy Confessions</span></li>
+            </ul>
+
+            <h3>Death</h3>
+            <ul>
+                <li><span class="song-title">Crystal Mountain</span></li>
+            </ul>
+
+            <h3>Dream Theater</h3>
+            <ul>
+                <li><span class="song-title">Pull Me Under</span></li>
+            </ul>
+
+            <h3>Edgar Winter</h3>
+            <ul>
+                <li><span class="song-title">Frankenstein</span></li>
+            </ul>
+
+            <h3>Gojira</h3>
+            <ul>
+                <li><span class="song-title">Stranded</span></li>
+            </ul>
+
+            <h3>God Forbid</h3>
+            <ul>
+                <li><span class="song-title">Chains of Humanity</span></li>
+            </ul>
+
+            <h3>Halford</h3>
+            <ul>
+                <li><span class="song-title">Tyrant</span></li>
+            </ul>
+
+            <h3>Havok</h3>
+            <ul>
+                <li><span class="song-title">From the Cradle to the Grave</span></li>
+            </ul>
+
+            <h3>Lamb of God</h3>
+            <ul>
+                <li><span class="song-title">Laid to Rest</span></li>
+                <li><span class="song-title">The Faded Line</span></li>
+            </ul>
+
+            <h3>Megadeth</h3>
+            <ul>
+                <li><span class="song-title">Ashes in Your Mouth</span></li>
+                <li><span class="song-title">Holy Wars</span></li>
+                <li><span class="song-title">Hangar 18</span></li>
+                <li><span class="song-title">Lucretia</span></li>
+                <li><span class="song-title">Skin o&apos; My Teeth</span></li>
+                <li><span class="song-title">The Killing Road</span></li>
+            </ul>
+
+            <h3>Metallica</h3>
+            <ul>
+                <li><span class="song-title">Am I Evil</span></li>
+                <li><span class="song-title">Creeping Death</span></li>
+                <li><span class="song-title">Disposable Heroes</span></li>
+                <li><span class="song-title">Eye of the Beholder</span></li>
+                <li><span class="song-title">For Whom the Bell Tolls</span></li>
+                <li><span class="song-title">Master of Puppets</span></li>
+                <li><span class="song-title">No Remorse</span></li>
+                <li><span class="song-title">Ride the Lightning</span></li>
+                <li><span class="song-title">Welcome Home (Sanitarium)</span></li>
+                <li><span class="song-title">The Four Horsemen</span></li>
+            </ul>
+
+            <h3>Pantera</h3>
+            <ul>
+                <li><span class="song-title">Domination</span></li>
+                <li><span class="song-title">Shattered</span></li>
+                <li><span class="song-title">This Love</span></li>
+                <li><span class="song-title">Revolution Is My Name</span></li>
+            </ul>
+
+            <h3>Slipknot</h3>
+            <ul>
+                <li><span class="song-title">Duality</span></li>
+            </ul>
+
+            <h3>Sylosis</h3>
+            <ul>
+                <li><span class="song-title">After Lifeless Years</span></li>
+            </ul>
+
+
+        </div>
+    </div>
+</body>
+</html>
