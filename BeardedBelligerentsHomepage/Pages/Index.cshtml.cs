@@ -3,18 +3,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BeardedBelligerentsHomepage.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexModel(ILogger<IndexModel> logger, IConfiguration config) : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
+        public string Title = "MissingConfig";
+        private readonly ILogger<IndexModel> _logger = logger;
+        private readonly IConfiguration _config = config;
 
         public void OnGet()
         {
-
+            Title = _config.GetValue<string>("Title") ?? "NotFound";            
         }
     }
 }

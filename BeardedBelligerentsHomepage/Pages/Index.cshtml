@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = @Model.Title;
 }
 <!--https://www.w3schools.com/w3css/w3css_web_tmp_band.asp-->
 <html lang="en">
@@ -83,11 +83,17 @@
             <!-- Performance Schedule -->
             <div class="schedule-overlay">
                 <div class="schedule-item">
-                    <h2>The Den</h2>
-                    <span>Saturday, March 16 </span><br />
-                    <span>Williamstown, VT</span><br/>
-                                       
-                </div>             
+                    <span>Northern Fire Battle of the Bands</span><br />
+                    <span>Eagle #1464</span>
+                    <span>Berlin, NH</span><br />
+                    <span>Saturday, May 18</span>
+                </div>
+                <div class="schedule-item">
+                    <span>PK's Irish Pub</span><br />
+                    <span>Rockingham, VT</span>
+                    <span>https://www.pksirishpub.com/</span><br />
+                    <span>Friday, May 31</span>
+                </div>                   
                 <!-- Add more schedule items as needed -->
             </div>
         </div>
