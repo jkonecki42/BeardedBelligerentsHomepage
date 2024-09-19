@@ -5,6 +5,7 @@
 }
 <!--https://www.w3schools.com/w3css/w3css_web_tmp_band.asp-->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Bearded Belligerents</title>
@@ -31,31 +32,33 @@
             padding: 20px;
         }
 
-            .schedule-overlay span {
-                margin-bottom: 2px;
-            }
+        .schedule-overlay span {
+            margin-bottom: 2px;
+        }
 
         .schedule-item {
             margin-bottom: 20px;
             line-height: 1.2;
-            font-size: larger;
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
         }
 
-            .schedule-item h2:before {
-                content: url('/Assets/BBRotateSmall.gif');
-                display: inline-block;
-                height: 1em;
-                vertical-align: middle;
-                margin-right: 3px;
-            }
+        .schedule-item h2:before {
+            content: url('/Assets/BBRotateSmall.gif');
+            display: inline-block;
+            height: 1em;
+            vertical-align: middle;
+            margin-right: 3px;
+        }
 
-            .schedule-item h2:after {
-                content: url('/Assets/BBRotateSmall.gif');
-                display: inline-block;
-                height: 1em;
-                vertical-align: middle;
-                margin-left: 3px;
-            }
+        .schedule-item h2:after {
+            content: url('/Assets/BBRotateSmall.gif');
+            display: inline-block;
+            height: 1em;
+            vertical-align: middle;
+            margin-left: 3px;
+        }
+
         .merch-link {
             text-align: center;
             color: #FFB33D;
@@ -64,17 +67,13 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Start Content -->
     <div id="home" class="w3-content">
 
         <!-- Logo -->
         <img src="~/Assets/BB_RIP_BlackBG_WithBeard.jpg" width="100%">
-
-        <!-- Merch Link -->
-        <div class="merch-link">
-            <a href="https://www.facebook.com/BeardedBelligerentsVT/shop" target="_blank">Check out our merch!</a>
-        </div>
 
         <!-- Image -->
         <div class="image-container">
@@ -83,22 +82,13 @@
             <!-- Performance Schedule -->
             <div class="schedule-overlay">
                 <div class="schedule-item">
-                    <span>Northern Fire Battle of the Bands</span><br />
-                    <span>Eagle #1464</span>
-                    <span>Berlin, NH</span><br />
-                    <span>Saturday, May 18</span>
+                    <div><a href="https://www.facebook.com/gustosbarre/">Gusto's Bar</a></div>
+                    <div>Barre, VT</div>
+                    <div>Saturday, October 05, 9pm</div>
                 </div>
-                <div class="schedule-item">
-                    <span>PK's Irish Pub</span><br />
-                    <span>Rockingham, VT</span>
-                    <span>https://www.pksirishpub.com/</span><br />
-                    <span>Friday, May 31</span>
-                </div>                   
                 <!-- Add more schedule items as needed -->
             </div>
         </div>
-
-        <!-- End Content -->
     </div>
 </body>
 
