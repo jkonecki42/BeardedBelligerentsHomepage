@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c489acdb-f04b-4b1c-afd8-d49868b2b43f/resourceGroups/BeardedBelligerents_Website/providers/Microsoft.Web/sites/metalforall",
+    "appService.deploySubpath": "."
+}
